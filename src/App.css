@@ -1,13 +1,261 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+
+/* general */
+html {
+  overflow-x: hidden !important;
+}
+body {
+  width: 100%- 10px;
+  overflow-x: hidden !important;
+  font-family: "Quicksand", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*::-webkit-scrollbar {
+  height: 0px !important;
+  width: 0px !important;  Remove scrollbar space 
+  background: transparent;  Optional: just make scrollbar invisible 
+}*/
+/* width */
+
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.th-roboto {
+  font-family: "Roboto", sans-serif;
+}
+.th-10 {
+  font-size: 10px;
+}
+.th-12 {
+  font-size: 12px;
+}
+.th-13 {
+  font-size: 13px;
+}
+.th-14 {
+  font-size: 14px;
+}
+.th-16 {
+  font-size: 16px;
+}
+.th-18 {
+  font-size: 18px;
+}
+.th-20 {
+  font-size: 20px;
+}
+.th-22 {
+  font-size: 22px;
+}
+.th-28 {
+  font-size: 28px;
+}
+.th-30 {
+  font-size: 30px;
+}
+.th-36 {
+  font-size: 36px;
+}
+.th-50 {
+  font-size: 50px;
+}
+.th-72 {
+  font-size: 72px;
+}
+
+/* font weight */
+.th-thin {
+  font-weight: 100;
+}
+.th-light {
+  font-weight: 300;
+}
+.th-regular {
+  font-weight: 400;
+}
+.th-medium {
+  font-weight: 500;
+}
+.th-bold {
+  font-weight: 700;
+}
+
+/* font color */
+.th-black {
+  color: #4b4b4b;
+}
+.th-grey {
+  color: #808080;
+}
+.th-white {
+  color: #ffffff;
+}
+.th-primary {
+  color: #f15722;
+}
+/* Link */
+.th-link {
+  color: #959595;
+}
+.th-link:hover {
+  text-decoration: none;
+  color: #51aa1b;
+}
+.th-link:active {
+  text-decoration: none;
+  color: #51aa1b;
+}
+.th-link-1:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+.th-link-black {
+  color: #000000;
+}
+.th-link-black:hover {
+  text-decoration: none;
+  color: #51aa1b;
+}
+.th-link-black:active {
+  text-decoration: none;
+  color: #51aa1b;
+}
+/* BUTTON */
+.th-btn-primary {
+  /* font-size: 16px; */
+  color: #ffffff;
+  background: #000000;
+  border-radius: 2px;
+  border: 2px solid #000000;
+  text-transform: capitalize;
+}
+.th-btn-primary-outline {
+  /* font-size: 16px; */
+  color: #000000;
+  background: #ffffff;
+  border-radius: 2px;
+  border: 2px solid #000000;
+  text-transform: capitalize;
+}
+.th-btn-primary-on {
+  background: #ddf7cd;
+  border-radius: 8px;
+  border: solid 1px #51aa1b;
+}
+.th-btn-primary-off {
+  background: #ffffff;
+  border-radius: 8px;
+  border: solid 1px #51aa1b;
+}
+.th-italic {
+  font-style: italic;
+}
+.th-btn-primary-ghost {
+  /* font-size: 16px; */
+  color: #51aa1b;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+}
+.th-btn-primary-on:focus,
+.th-btn-primary-off:focus,
+.th-btn-primary:focus,
+.th-btn-primary-outline:focus,
+.th-btn-primary-ghost:focus {
+  outline: none;
+}
+.th-btn-secondary {
+  /* font-size: 16px; */
+  color: #ffffff;
+  background: #263a96;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+}
+/* BG Color */
+.th-bg-white {
+  background: #ffffff;
+}
+/* BG Color Neutral */
+.th-bg-primary {
+  background: #51aa1b;
+}
+
+.th-bg-black {
+  background: #000000;
+}
+.th-bg-grey-4 {
+  background: #4b4b4b;
+}
+.th-bg-grey-3 {
+  background: #959595;
+}
+.th-bg-grey-2 {
+  background: #d5d5d5;
+}
+.th-bg-grey-1 {
+  background: #f5f5f5;
+}
+.th-bg-white {
+  background: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .th-hidden-sm {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .th-hidden-md {
+    display: none !important;
+  }
+}
+
+/* Input  */
+.th-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid #d5d5d5;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  /* background-image: url("../svg/search\ .svg"); */
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding: 4px 4px 4px 32px;
+}
+.th-input:focus {
+  outline-style: none;
+}
+
+.th-logo {
+  height: 44px;
+}
+.th-hero-bg {
+  position: absolute;
+  top: -110px;
+  z-index: -1;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -35,4 +283,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
