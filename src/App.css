@@ -170,6 +170,7 @@ body {
 }
 .th-btn-primary-ghost {
   /* font-size: 16px; */
+  padding: 0;
   color: #ffffff;
   background: none;
   border: none;
@@ -254,7 +255,7 @@ body {
 }
 .th-hero-bg {
   position: absolute;
-  top: -110px;
+  top: -150px;
   z-index: -1;
 }
 .th-hero-img {
@@ -281,12 +282,26 @@ body {
   padding-top: 0px;
   transition-duration: 300ms;
 }
+.th-icon-bg {
+  background-color: #ffe2d8;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  width: 60px;
+  margin: auto;
+}
 .th-icon-img {
-  height: 48px;
+  height: 60px;
+}
+.th-side-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
 }
 
 .th-get-app {
-  background-color: #fff0eb;
+  background-color: #ffe2d8;
   overflow: hidden;
 }
 .th-get-app-bg {
