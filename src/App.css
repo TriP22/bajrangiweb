@@ -170,10 +170,13 @@ body {
 }
 .th-btn-primary-ghost {
   /* font-size: 16px; */
-  color: #51aa1b;
+  color: #ffffff;
   background: none;
   border: none;
   text-transform: uppercase;
+}
+.th-btn-primary-ghost:hover {
+  color: #000000;
 }
 .th-btn-primary-on:focus,
 .th-btn-primary-off:focus,
@@ -253,6 +256,50 @@ body {
   position: absolute;
   top: -110px;
   z-index: -1;
+}
+.th-hero-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 450px;
+}
+.th-playStore-btn {
+  padding-top: 8px;
+  height: 42px;
+  transition-duration: 300ms;
+}
+.th-appStore-btn {
+  padding-top: 8px;
+  height: 42px;
+  transition-duration: 300ms;
+}
+.th-playStore-btn:hover {
+  padding-top: 0px;
+  transition-duration: 300ms;
+}
+.th-appStore-btn:hover {
+  padding-top: 0px;
+  transition-duration: 300ms;
+}
+.th-icon-img {
+  height: 48px;
+}
+
+.th-get-app {
+  background-color: #fff0eb;
+}
+
+/* Footer CSS */
+.th-footer {
+  background-color: #ffa282;
+}
+.th-footer-logo {
+  height: 28px;
+}
+.th-footer-hr {
+  color: #000000;
+  border-top: 2px solid rgba(0, 0, 0, 1);
+  margin-bottom: 24px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
