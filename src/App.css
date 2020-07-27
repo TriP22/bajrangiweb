@@ -117,11 +117,11 @@ body {
 }
 .th-link:hover {
   text-decoration: none;
-  color: #51aa1b;
+  color: #f15722;
 }
 .th-link:active {
   text-decoration: none;
-  color: #51aa1b;
+  color: #f15722;
 }
 .th-link-1:hover {
   text-decoration: none;
@@ -132,11 +132,11 @@ body {
 }
 .th-link-black:hover {
   text-decoration: none;
-  color: #51aa1b;
+  color: #f15722;
 }
 .th-link-black:active {
   text-decoration: none;
-  color: #51aa1b;
+  color: #f15722;
 }
 /* BUTTON */
 .th-btn-primary {
@@ -158,12 +158,12 @@ body {
 .th-btn-primary-on {
   background: #ddf7cd;
   border-radius: 8px;
-  border: solid 1px #51aa1b;
+  border: solid 1px #f15722;
 }
 .th-btn-primary-off {
   background: #ffffff;
   border-radius: 8px;
-  border: solid 1px #51aa1b;
+  border: solid 1px #f15722;
 }
 .th-italic {
   font-style: italic;
@@ -199,7 +199,7 @@ body {
 }
 /* BG Color Neutral */
 .th-bg-primary {
-  background: #51aa1b;
+  background: #f15722;
 }
 
 .th-bg-black {
@@ -287,6 +287,11 @@ body {
 
 .th-get-app {
   background-color: #fff0eb;
+  overflow: hidden;
+}
+.th-get-app-bg {
+  height: 50px;
+  z-index: -1;
 }
 
 /* Footer CSS */

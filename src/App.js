@@ -1,11 +1,12 @@
 import React from "react";
 import logoReact from "./logo.svg";
 import logo from "./assets/img/logo.png";
-import heroBg from "./assets/img/homeShape2.png";
+import heroBg from "./assets/img/homeShape3.png";
 import hero from "./assets/img/hero.png";
 import playStore from "./assets/img/google-play-badge.png";
 import appStore from "./assets/img/app-store.png";
 import icon from "./assets/img/icon.png";
+import footerBackdrop from "./assets/img/footer-backdrop.png";
 import "./App.css";
 import { Button, Container, Row, Col, Image } from "react-bootstrap";
 
@@ -107,6 +108,8 @@ function App() {
 
       {/* Get App Section Start */}
       <div className="th-get-app py-5">
+        <Image className=" w-100" src={footerBackdrop} />
+
         <Container className="py-5">
           <div className="text-center">
             <p className="th-28 th-medium">Book your Early Access</p>
@@ -130,7 +133,9 @@ function App() {
         </Container>
         <div className="text-center">
           <p className="text-uppercase th-bold">
-            Made with <i class="fa fa-heart" aria-hidden="true"></i> in Himachal
+            Made with{" "}
+            <i class="fa fa-heart th-28 th-primary" aria-hidden="true"></i> in
+            Himachal
           </p>
         </div>
       </div>
