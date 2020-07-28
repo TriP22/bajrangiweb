@@ -53,13 +53,19 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         {/* Top Bar Start */}
+        <div className="th-hidden-md th-bg-primary text-center py-2">
+          <p className="th-primary th-12 th-white mb-0">
+            Call for queries: +91-7418520963
+          </p>
+        </div>
         <Container className="pt-3">
           <Row>
-            <Col md={4}>
+            <Col md={4} className="th-hidden-sm">
               <p className="th-primary th-14">
                 Call for queries: +91-7418520963
               </p>
             </Col>
+
             <Col md={4} className="text-center">
               <Image className="th-logo" src={logo} />
             </Col>
@@ -83,17 +89,17 @@ export default class App extends React.Component {
                 more time and energy for yourself and those you love.
               </p>
               <Row className="pt-5">
-                <Col>
+                <Col xl={4} xs={6}>
                   <Button className="th-btn-primary th-medium w-100 th-16">
                     Get Early Access
                   </Button>
                 </Col>
-                <Col>
+                <Col xl={4} xs={6}>
                   <Button className="th-btn-primary-outline th-medium w-100 th-16">
                     Learn More
                   </Button>
                 </Col>
-                <Col></Col>
+                <Col xl={4}></Col>
               </Row>
             </Col>
             <Col md={6}>
@@ -170,6 +176,10 @@ export default class App extends React.Component {
         {/* Delivery Partners Start */}
         <Container className="py-5">
           <Row>
+            <Col md={6}></Col>
+            <Col md={6}>
+              <p className="th-primary th-medium th-28">Delivery Partners</p>
+            </Col>
             <Col md={6}>
               <div
                 className="w-100 th-side-img"
@@ -179,14 +189,29 @@ export default class App extends React.Component {
               ></div>
             </Col>
             <Col md={6} className="my-auto">
-              <p className="th-primary th-medium th-28">Delivery Partners</p>
-
               <p className="th-18 th-grey">
                 Delivering with Bajrangi, you get flexibility and financial
                 stability. Sprint for a living or for a goal, all on your
                 schedule and on your own terms.
               </p>
-              <p className="th-18 th-bold mb-2">Download From:</p>
+              <p className="th-14 th-grey">
+                We will send you a link, open it on your phone to download the
+                app
+              </p>
+              <Row className="pb-3">
+                <Col>
+                  <input
+                    className="h-100 w-100 px-3"
+                    placeholder="Mobile Number"
+                  />
+                </Col>
+                <Col>
+                  <Button className="th-btn-primary th-medium w-100 th-16 px-4">
+                    Share App Link
+                  </Button>
+                </Col>
+              </Row>
+              <p className="th-14 th-grey mb-0">Download app from</p>
               <div className="">
                 <span className="pr-3">
                   <button className="th-btn-primary-ghost">
@@ -206,6 +231,10 @@ export default class App extends React.Component {
         {/* Store Merchants Start */}
         <Container className="py-5">
           <Row>
+            <Col md={6}></Col>
+            <Col md={6}>
+              <p className="th-primary th-medium th-28">Store Merchants</p>
+            </Col>
             <Col md={6}>
               <div
                 className="w-100 th-side-img"
@@ -215,14 +244,29 @@ export default class App extends React.Component {
               ></div>
             </Col>
             <Col md={6} className="my-auto">
-              <p className="th-primary th-medium th-28">Store Merchants</p>
-
               <p className="th-18 th-grey">
                 Bajrangi’s innovative merchant-focused solutions enhance your
                 success by transforming your business. Open your doors to an
                 entire city and see your reach and revenue grow.
               </p>
-              <p className="th-18 th-bold mb-2">Download From:</p>
+              <p className="th-14 th-grey">
+                We will send you a link, open it on your phone to download the
+                app
+              </p>
+              <Row className="pb-3">
+                <Col>
+                  <input
+                    className="h-100 w-100 px-3"
+                    placeholder="Mobile Number"
+                  />
+                </Col>
+                <Col>
+                  <Button className="th-btn-primary th-medium w-100 th-16 px-4">
+                    Share App Link
+                  </Button>
+                </Col>
+              </Row>
+              <p className="th-14 th-grey mb-0">Download app from</p>
               <div className="">
                 <span className="pr-3">
                   <button className="th-btn-primary-ghost">
