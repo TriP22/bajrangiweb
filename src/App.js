@@ -11,6 +11,11 @@ import merchant from "./assets/img/merchant.png";
 import "./App.css";
 import { Button, Container, Row, Col, Image } from "react-bootstrap";
 import Category from "./component/Category";
+import shipping from "./assets/img/in-transit.png";
+import bill from "./assets/img/bill.png";
+
+import liveTracking from "./assets/img/order-on-the-way.png";
+import clock from "./assets/img/last-24-hours.png";
 
 const scrollTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -23,6 +28,7 @@ export default class App extends React.Component {
     this.state = {
       categoryData: [],
       serviceData: [],
+      cityData: [],
     };
   }
 
@@ -44,23 +50,29 @@ export default class App extends React.Component {
         console.log(error);
       });
   };
+  fetchCity = (params) => {
+    Axios.get("/clintapiV1/city", { params: { ...params } })
+      .then((res) => {
+        this.setState({ cityData: res.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   componentDidMount = () => {
     this.fetchCategory({});
     this.fetchService({});
+    this.fetchCity({});
   };
 
   render() {
     return (
       <React.Fragment>
         {/* Top Bar Start */}
-        <div className="th-hidden-md th-bg-primary text-center py-2">
-          <p className="th-primary th-12 th-white mb-0">
-            Call for queries: +91-7418520963
-          </p>
-        </div>
+
         <Container className="pt-3">
           <Row>
-            <Col md={4} className="th-hidden-sm">
+            <Col md={4}>
               <p className="th-primary th-14">
                 Call for queries: +91-7418520963
               </p>
@@ -88,18 +100,29 @@ export default class App extends React.Component {
                 satisfies your cravings and connects you with possibilities —
                 more time and energy for yourself and those you love.
               </p>
+              {/* <ul className="th-18  th-bold">
+                <li>40 to 50 min delivery time</li>
+                <li>Live Tracking</li>
+                <li>No minimum order</li>
+              </ul> */}
               <Row className="pt-5">
-                <Col xl={4} xs={6}>
-                  <Button className="th-btn-primary th-medium w-100 th-16">
-                    Get Early Access
+                <Col xs={12}>
+                  <p className="th-14 th-grey">
+                    Please Enter a valid Mobile No. We will send you a link,
+                    open it on your phone to download the app
+                  </p>
+                </Col>
+                <Col xs={6}>
+                  <input
+                    className="h-100 w-100 px-3"
+                    placeholder="Mobile Number"
+                  />
+                </Col>
+                <Col xs={6}>
+                  <Button className="th-btn-primary th-medium w-100 th-16 px-4">
+                    Share App Link
                   </Button>
                 </Col>
-                <Col xl={4} xs={6}>
-                  <Button className="th-btn-primary-outline th-medium w-100 th-16">
-                    Learn More
-                  </Button>
-                </Col>
-                <Col xl={4}></Col>
               </Row>
             </Col>
             <Col md={6}>
@@ -178,7 +201,9 @@ export default class App extends React.Component {
           <Row>
             <Col md={6}></Col>
             <Col md={6}>
-              <p className="th-primary th-medium th-28">Delivery Partners</p>
+              <p className="th-primary th-medium th-28">
+                Be Bajrangi Delivery Partner
+              </p>
             </Col>
             <Col md={6}>
               <div
@@ -190,13 +215,15 @@ export default class App extends React.Component {
             </Col>
             <Col md={6} className="my-auto">
               <p className="th-18 th-grey">
-                Delivering with Bajrangi, you get flexibility and financial
-                stability. Sprint for a living or for a goal, all on your
-                schedule and on your own terms.
+                If you own a bicycle / Motorcycle or you ready to do delivery on
+                your foot. You are eligible to become our delivery partner.
+                Delivering with Bajrangi, you get flexible and financial
+                stability. Sprint for a living or goal all your schedule and on
+                your terms.
               </p>
               <p className="th-14 th-grey">
-                We will send you a link, open it on your phone to download the
-                app
+                Please Enter a valid Mobile No. We will send you a link, open it
+                on your phone to download the app
               </p>
               <Row className="pb-3">
                 <Col>
@@ -233,7 +260,7 @@ export default class App extends React.Component {
           <Row>
             <Col md={6}></Col>
             <Col md={6}>
-              <p className="th-primary th-medium th-28">Store Merchants</p>
+              <p className="th-primary th-medium th-28">Sell on Bajrangi</p>
             </Col>
             <Col md={6}>
               <div
@@ -245,13 +272,16 @@ export default class App extends React.Component {
             </Col>
             <Col md={6} className="my-auto">
               <p className="th-18 th-grey">
-                Bajrangi’s innovative merchant-focused solutions enhance your
-                success by transforming your business. Open your doors to an
-                entire city and see your reach and revenue grow.
+                Take your shop online in 3 simple steps:
+                <ol>
+                  <li>Register on app</li>
+                  <li>Add Products</li>
+                  <li>Get orders online</li>
+                </ol>
               </p>
               <p className="th-14 th-grey">
-                We will send you a link, open it on your phone to download the
-                app
+                Please Enter a valid Mobile No. We will send you a link, open it
+                on your phone to download the app
               </p>
               <Row className="pb-3">
                 <Col>
@@ -287,30 +317,50 @@ export default class App extends React.Component {
         <div className="">
           <Image className=" w-100" src={footerBackdrop} />
           <div className="th-get-app pb-5">
-            <Container className="pb-5">
-              <div className="text-center">
-                <p className="th-28 th-medium">Book your Early Access</p>
-                <p className="th-26 th-grey pb-5">
-                  Become the first few to put your hands on the amazing offers
-                  and sales lined up especially for you
-                </p>
-              </div>
-              <Row>
-                <Col></Col>
-                <Col>
-                  <input
-                    className="h-100 w-100 px-3"
-                    placeholder="Mobile Number"
-                  />
+            <Container>
+              <Row className="mb-5">
+                <Col className="text-center">
+                  <Image className="th-icon-img" src={shipping} />
+                  <p className="th-18 th-bold mb-0">Delivered in 45 mins</p>
+                  <p className="th-14">
+                    The quickest way to get things delivered
+                  </p>
                 </Col>
-                <Col>
-                  <Button className="th-btn-primary th-medium w-100 th-16 px-4">
-                    Submit
-                  </Button>
+                <Col className="text-center">
+                  <Image className="th-icon-img" src={bill} />
+                  <p className="th-18 th-bold mb-0">No minimum order</p>
+                  <p className="th-14">
+                    Deliveries with no minimum order value
+                  </p>
                 </Col>
-                <Col></Col>
+                <Col className="text-center">
+                  <Image className="th-icon-img" src={liveTracking} />
+                  <p className="th-18 th-bold mb-0">Live Tracking</p>
+                  <p className="th-14">Track your order's real time status</p>
+                </Col>
+                <Col className="text-center">
+                  <Image className="th-icon-img" src={clock} />
+                  <p className="th-18 th-bold mb-0">Available 24x7</p>
+                  <p className="th-14">Day or night, get it delivered</p>
+                </Col>
+              </Row>
+              <Row className="pb-md-5 justify-content-md-center">
+                <Col md={12} className="text-center">
+                  <p className="th-28 th-medium mb-4">Available in cities.</p>
+                </Col>
+                {this.state.cityData.map((item, index) => {
+                  return (
+                    <>
+                      <Category
+                        categoryImage={item.logo}
+                        categoryName={item.city_name}
+                      />
+                    </>
+                  );
+                })}
               </Row>
             </Container>
+
             <div className="text-center">
               <p className="text-uppercase th-bold">
                 Made with{" "}
