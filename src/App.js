@@ -70,9 +70,13 @@ export default class App extends React.Component {
       <React.Fragment>
         {/* Top Bar Start */}
 
+        <Container fluid className="th-bg-primary-2 text-center th-hidden-md">
+          <p className="th-14">Call for queries: +91-7418520963</p>
+        </Container>
+
         <Container className="pt-3">
           <Row>
-            <Col md={4}>
+            <Col md={4} className="th-hidden-sm">
               <p className="th-primary th-14">
                 Call for queries: +91-7418520963
               </p>
@@ -118,7 +122,7 @@ export default class App extends React.Component {
                     placeholder="Mobile Number"
                   />
                 </Col>
-                <Col xs={6}>
+                <Col xs={6} className="pl-0">
                   <Button className="th-btn-primary th-medium w-100 th-16 px-4">
                     Share App Link
                   </Button>
@@ -159,7 +163,7 @@ export default class App extends React.Component {
 
         {/* Category Start */}
         <Container>
-          <Row className="pt-md-5 justify-content-md-center">
+          <Row className="pt-md-5 justify-content-sm-center">
             <Col md={12} className="text-center">
               <p className="th-primary th-medium th-28 mb-4">
                 Essential Products
@@ -176,7 +180,7 @@ export default class App extends React.Component {
               );
             })}
           </Row>
-          <Row className="py-md-5 justify-content-md-center">
+          <Row className="py-md-5 justify-content-sm-center">
             <Col md={12} className="text-center">
               <p className="th-primary th-medium th-28 mb-4">
                 Professional Services
@@ -232,7 +236,7 @@ export default class App extends React.Component {
                     placeholder="Mobile Number"
                   />
                 </Col>
-                <Col>
+                <Col className="pl-0">
                   <Button className="th-btn-primary th-medium w-100 th-16 px-4">
                     Share App Link
                   </Button>
@@ -290,7 +294,7 @@ export default class App extends React.Component {
                     placeholder="Mobile Number"
                   />
                 </Col>
-                <Col>
+                <Col className="pl-0">
                   <Button className="th-btn-primary th-medium w-100 th-16 px-4">
                     Share App Link
                   </Button>
@@ -313,38 +317,38 @@ export default class App extends React.Component {
         </Container>
         {/* Store Merchants End */}
 
-        {/* Get App Section Start */}
-        <div className="">
+        {/* City Section Start */}
+        <div className="pt-5">
           <Image className=" w-100" src={footerBackdrop} />
           <div className="th-get-app pb-5">
             <Container>
               <Row className="mb-5">
-                <Col className="text-center">
+                <Col md={3} xs={6} className="text-center">
                   <Image className="th-icon-img" src={shipping} />
                   <p className="th-18 th-bold mb-0">Delivered in 45 mins</p>
                   <p className="th-14">
                     The quickest way to get things delivered
                   </p>
                 </Col>
-                <Col className="text-center">
+                <Col md={3} xs={6} className="text-center">
                   <Image className="th-icon-img" src={bill} />
                   <p className="th-18 th-bold mb-0">No minimum order</p>
                   <p className="th-14">
                     Deliveries with no minimum order value
                   </p>
                 </Col>
-                <Col className="text-center">
+                <Col md={3} xs={6} className="text-center">
                   <Image className="th-icon-img" src={liveTracking} />
                   <p className="th-18 th-bold mb-0">Live Tracking</p>
                   <p className="th-14">Track your order's real time status</p>
                 </Col>
-                <Col className="text-center">
+                <Col md={3} xs={6} className="text-center">
                   <Image className="th-icon-img" src={clock} />
                   <p className="th-18 th-bold mb-0">Available 24x7</p>
                   <p className="th-14">Day or night, get it delivered</p>
                 </Col>
               </Row>
-              <Row className="pb-md-5 justify-content-md-center">
+              <Row className="pb-md-5 justify-content-sm-center">
                 <Col md={12} className="text-center">
                   <p className="th-28 th-medium mb-4">Available in cities.</p>
                 </Col>
@@ -370,19 +374,22 @@ export default class App extends React.Component {
             </div>
           </div>
         </div>
-        {/* Get App Section End */}
+        {/* City Section End */}
 
         {/* Footer Start */}
         <div className="th-footer py-5">
           <Container className="pt-5">
             <Row>
-              <Col md={4}>
+              <Col>
                 <p className="th-bold th-14">©2020 Bajrangi.in</p>
               </Col>
-              <Col md={4} className="text-center">
+              <Col className="text-center th-hidden-sm">
                 <Image className="th-footer-logo" src={logo} />
               </Col>
-              <Col md={4} className="text-right">
+              <Col className="text-right th-hidden-md">
+                <Image className="th-footer-logo" src={logo} />
+              </Col>
+              <Col className="text-right th-hidden-sm">
                 <Button
                   className="th-btn-primary th-medium th-16"
                   onClick={scrollTop}
@@ -393,28 +400,59 @@ export default class App extends React.Component {
               </Col>
             </Row>
             <hr className="th-footer-hr"></hr>
-            <div className="text-right">
-              <span className="pl-2">
+
+            {/* Desktop */}
+            <div className="text-right th-hidden-sm">
+              <span className="pl-3">
                 <button className="th-btn-primary-ghost pr-0">
                   <i class="fa fa-facebook th-20" aria-hidden="true"></i>
                 </button>
               </span>
-              <span className="pl-2">
+              <span className="pl-3">
                 <button className="th-btn-primary-ghost pr-0">
                   <i class="fa fa-linkedin th-20" aria-hidden="true"></i>
                 </button>
               </span>
-              <span className="pl-2">
+              <span className="pl-3">
                 <button className="th-btn-primary-ghost pr-0">
                   <i class="fa fa-twitter th-20" aria-hidden="true"></i>
                 </button>
               </span>
-              <span className="pl-2">
+              <span className="pl-3">
                 <button className="th-btn-primary-ghost pr-0">
                   <i class="fa fa-youtube-play th-20" aria-hidden="true"></i>
                 </button>
               </span>
-              <span className="pl-2">
+              <span className="pl-3">
+                <button className="th-btn-primary-ghost pr-0">
+                  <i class="fa fa-instagram th-20" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+
+            {/* Mobile */}
+            <div className="text-center th-hidden-md">
+              <span className="pl-3">
+                <button className="th-btn-primary-ghost pr-0">
+                  <i class="fa fa-facebook th-20" aria-hidden="true"></i>
+                </button>
+              </span>
+              <span className="pl-3">
+                <button className="th-btn-primary-ghost pr-0">
+                  <i class="fa fa-linkedin th-20" aria-hidden="true"></i>
+                </button>
+              </span>
+              <span className="pl-3">
+                <button className="th-btn-primary-ghost pr-0">
+                  <i class="fa fa-twitter th-20" aria-hidden="true"></i>
+                </button>
+              </span>
+              <span className="pl-3">
+                <button className="th-btn-primary-ghost pr-0">
+                  <i class="fa fa-youtube-play th-20" aria-hidden="true"></i>
+                </button>
+              </span>
+              <span className="pl-3">
                 <button className="th-btn-primary-ghost pr-0">
                   <i class="fa fa-instagram th-20" aria-hidden="true"></i>
                 </button>

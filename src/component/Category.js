@@ -4,7 +4,7 @@ import { Col, Image } from "react-bootstrap";
 export default class Category extends Component {
   render() {
     return (
-      <Col md={2} className="text-center">
+      <Col md={2} xs={4} className="text-center">
         <div className="th-icon-bg">
           <Image className="th-icon-img" src={this.props.categoryImage} />
         </div>
